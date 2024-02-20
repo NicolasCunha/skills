@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "b7276443-c66a-4954-833a-c21cb0f13b8d",
+		"name": "Sandbox - API Gateway",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9264868"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get Products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{PRODUCT_BASE_URL}}",
+							"host": [
+								"{{PRODUCT_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 25.00,\r\n    \"supplierId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PRODUCT_BASE_URL}}",
+							"host": [
+								"{{PRODUCT_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Product",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato Updated\",\r\n    \"quantity\" : 15,\r\n    \"price\" : 22.00,\r\n    \"supplierId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PRODUCT_BASE_URL}}",
+							"host": [
+								"{{PRODUCT_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Product",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 25.00,\r\n    \"supplierId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{PRODUCT_BASE_URL}}",
+							"host": [
+								"{{PRODUCT_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Supplier",
+			"item": [
+				{
+					"name": "Get Suppliers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{SUPPLIER_BASE_URL}}",
+							"host": [
+								"{{SUPPLIER_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Supplier",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SUPPLIER_BASE_URL}}",
+							"host": [
+								"{{SUPPLIER_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Supplier",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SUPPLIER_BASE_URL}}",
+							"host": [
+								"{{SUPPLIER_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Supplier",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA Updated\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{SUPPLIER_BASE_URL}}",
+							"host": [
+								"{{SUPPLIER_BASE_URL}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gateway",
+			"item": [
+				{
+					"name": "Product",
+					"item": [
+						{
+							"name": "Gateway - Get Products",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/product",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Create Product",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 25.00,\r\n    \"supplierId\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/product",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Update Product",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 25.00,\r\n    \"supplierId\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/product",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Delete Product",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"sku\" : \"100\",\r\n    \"name\" : \"Potato\",\r\n    \"quantity\" : 10,\r\n    \"price\" : 25.00,\r\n    \"supplierId\" : 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/product",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Supplier",
+					"item": [
+						{
+							"name": "Gateway - Get Suppliers",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/supplier",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Create Supplier",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/supplier",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Update Supplier",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA Updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/supplier",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Gateway - Delete Supplier",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id\" : 100,\r\n    \"name\" : \"Lucca SA Updated\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{GATEWAY_BASE_URL}}/supplier",
+									"host": [
+										"{{GATEWAY_BASE_URL}}"
+									],
+									"path": [
+										"supplier"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "PRODUCT_BASE_URL",
+			"value": "http://localhost:8081/product",
+			"type": "string"
+		},
+		{
+			"key": "SUPPLIER_BASE_URL",
+			"value": "http://localhost:8082/supplier",
+			"type": "string"
+		},
+		{
+			"key": "GATEWAY_BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}

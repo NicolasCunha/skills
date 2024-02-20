@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  eventstoredb:
+    image: eventstore/eventstore:latest
+    env_file:
+      - .env
+    ports:
+      - "1113:1113" # map internal tcp port
+      - "2113:2113" # map internal admin ui port
+    volumes:
+      - type: volume
+        source: eventstore-data
+        target: /var/lib/eventstore
+      - type: volume
+        source: eventstore-logs
+        target: /var/log/eventstore
+
+volumes:
+  eventstore-data:
+  eventstore-logs:

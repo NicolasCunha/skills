@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "39af9350-45a8-4808-93a7-e9e64d0c151a",
+		"name": "Kafka Spring",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "9264868"
+	},
+	"item": [
+		{
+			"name": "Produce Something",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 200,\r\n    \"description\" : \"This is my description!\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/springProduce",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"springProduce"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

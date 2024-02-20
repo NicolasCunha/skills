@@ -1,0 +1,31 @@
+databaseChangeLog:
+     - changeSet:
+               id: create-product-relation
+               author: Nicolas Filipe Cunha
+               changes:
+                    - createTable:
+                         tableName: product
+                         columns:
+                              - column:
+                                   constraints:
+                                        nullable: false
+                                        primaryKey: true
+                                        primaryKeyName: product_pk
+                                   name: id
+                                   type: UUID
+                              - column:
+                                   constraints:
+                                        nullable: false
+                                   name: name
+                                   type: TEXT
+                              - column:
+                                   constraints:
+                                        nullable: false
+                                   name: quantity
+                                   type: INT
+                              - column:
+                                   constraints:
+                                        nullable: false
+                                   name: price
+                                   type: DOUBLE
+

@@ -1,0 +1,5 @@
+Hello, ${user}. How are you? This is a template from a File.
+You have the following items in your cart:
+<#list items as item>
+Item: ${item.name} / Qty: ${item.qty}
+</#list>
