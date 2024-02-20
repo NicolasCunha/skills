@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.nfcunha'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    // https://mvnrepository.com/artifact/software.amazon.awssdk/s3
+    // https://mvnrepository.com/artifact/com.amazonaws/aws-java-sdk-s3
+    implementation group: 'com.amazonaws', name: 'aws-java-sdk-s3', version: '1.12.661'
+
+}
+
+test {
+    useJUnitPlatform()
+}
